@@ -1,0 +1,7 @@
+{
+  "name": "mod-shell-bot",
+  "description": "TG shell bot",
+  "repository": "https://github.com/Jitendra7007/heroku-shell",
+  "keywords": ["heroku", "shell"],
+  "stack": "container"
+}
