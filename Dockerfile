@@ -5,13 +5,13 @@ WORKDIR /home/absentsun/
 RUN chmod 777 /home/absentsun/
 RUN apt-get -qq update
 RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:wahibre/mtn && \
-    apt-get -qq update && \
+RUN add-apt-repository ppa:wahibre/mtn
+RUN apt-get -qq update && \
     apt-get install -y mtn \
 
 # install required packages
-RUN rm -rf /var/lib/apt/lists/* && \
-    apt-get -qq update && apt-get -qq install -y \
+RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get -qq update && apt-get -qq install -y \
     # this package is required to fetch "contents" via "TLS"
     apt-transport-https cmake protobuf-compiler \
     # install coreutils
