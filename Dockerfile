@@ -5,7 +5,7 @@ WORKDIR /home/absentsun/
 RUN chmod 777 /home/absentsun/
 RUN apt-get -qq update
 # install required packages
-RUN apt-get install -y software-properties-common && \
+RUN apt-get install -y software-properties-common python-software-properties && \
     rm -rf /var/lib/apt/lists/* && \
     apt-get -qq update && apt-get -qq install -y \
     # this package is required to fetch "contents" via "TLS"
