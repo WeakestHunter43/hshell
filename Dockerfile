@@ -49,5 +49,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | sh
 RUN apt-get install -y nodejs
 RUN npm install -g node-gyp
 RUN npm install -g skynet-cli
+RUN npm config set user 0
+RUN npm config set unsafe-perm true
 RUN npm install
 CMD node server
