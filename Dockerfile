@@ -48,8 +48,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 RUN curl -sL https://deb.nodesource.com/setup_14.x | sh
 RUN apt-get install -y nodejs
 RUN npm install -g node-gyp
-RUN npm install -g npm-check-updates
-RUN npm-check-updates -u
 RUN npm install -g skynet-cli
 RUN npm install
 CMD node server
