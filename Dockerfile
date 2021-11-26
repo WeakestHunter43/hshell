@@ -13,7 +13,7 @@ RUN apt-get install -y software-properties-common && \
     # install coreutils
     coreutils aria2 jq pv gcc g++ htop vim nano \
     # install encoding tools
-    mediainfo tmux \
+    mediainfo tmux fuse ffmpeg \
     curl git gnupg2 unzip wget pv jq build-essential make \
     # miscellaneous
     neofetch python3 python3-pip git bash bash-completion \
