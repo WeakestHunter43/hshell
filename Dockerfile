@@ -12,7 +12,7 @@ RUN apt-get -qq update && \
 # install required packages
 RUN apt-get -qq update && apt-get -qq install -y \
     # this package is required to fetch "contents" via "TLS"
-    apt-transport-https cmake protobuf-compiler \
+    apt-transport-https cmake protobuf-compiler python py3-pip \
     # install coreutils
     coreutils aria2 jq pv gcc g++ htop vim nano \
     # install encoding tools
