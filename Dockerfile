@@ -17,7 +17,7 @@ RUN apt-get install -y software-properties-common && \
     curl git gnupg2 unzip wget pv jq build-essential make \
     # miscellaneous
     neofetch python3 python3-pip git bash bash-completion \
-    python-minimal locales python-lxml gettext-base xz-utils \
+    locales python-lxml gettext-base xz-utils \
     # install extraction tools
     p7zip-full p7zip-rar rar unrar zip unzip \
     # miscellaneous helpers
