@@ -3,7 +3,7 @@ FROM ubuntu:latest
 # Install all the required packages
 WORKDIR /home/absentsun/
 RUN chmod 777 /home/absentsun/
-
+RUN apt-get -qq update
 # install required packages
 RUN apt-get install -y software-properties-common && \
     rm -rf /var/lib/apt/lists/* && \
