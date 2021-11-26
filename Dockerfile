@@ -4,9 +4,13 @@ FROM ubuntu:latest
 WORKDIR /home/absentsun/
 RUN chmod 777 /home/absentsun/
 RUN apt-get -qq update
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository ppa:wahibre/mtn && \
+    apt-get -qq update && \
+    apt-get install -y mtn \
+
 # install required packages
-RUN apt-get install -y software-properties-common python-software-properties && \
-    rm -rf /var/lib/apt/lists/* && \
+RUN rm -rf /var/lib/apt/lists/* && \
     apt-get -qq update && apt-get -qq install -y \
     # this package is required to fetch "contents" via "TLS"
     apt-transport-https cmake protobuf-compiler \
@@ -24,10 +28,6 @@ RUN apt-get install -y software-properties-common python-software-properties && 
     mediainfo && \
     # clean up the container "layer", after we are done
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
-
-RUN add-apt-repository ppa:wahibre/mtn && \
-    apt-get -qq update && \
-    apt-get install -y mtn \
 
 ENV LANG C.UTF-8
 
